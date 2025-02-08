@@ -81,10 +81,10 @@ h6 {
 }
 
 :root {
-    --Red:#E63946;
+    --Red:#D32F2F;
     --Yellow: #F4A261;
     --White: #FFFFFF;
-    --Bright-Yellow: #FFC107;
+    --Bright-Yellow: #FF6F00;
     --Dark-Gray: #333333;
   }
 
@@ -270,16 +270,47 @@ main .sample_meals img {
     height: 80%;
 }
 
-main .sample_meals button {
+main .sample_meals button,
+main .book_a_table button {
     display: block;
     margin: auto;
     border-radius: 0rem;
     margin-top: 1rem;
 }
 
-main .sample_meals button:hover {
+main .sample_meals button:hover,
+main .book_a_table button:hover {
     background: transparent;
     color: var(--Bright-Yellow);
+}
+
+main .book_a_table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+main .book_a_table h2 {
+    color: var(--Red);
+    font-size: 2rem;
+}
+
+main .book_a_table p {
+    width: 60%;
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+
+main .table_types {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .table_types img {
+    width: 50%;
+    height: auto;
 }
 
 
@@ -330,7 +361,8 @@ main .sample_meals button:hover {
         font-size: 2rem;
     }
 
-    main .description p {
+    main .description p,
+    main .book_a_table p  {
         width: 90%;
         margin-top: 1rem;
     }
@@ -343,4 +375,5 @@ main .sample_meals button:hover {
         width: 90vw;
         height: auto;
     }
+
 }
