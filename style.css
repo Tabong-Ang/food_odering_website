@@ -110,6 +110,15 @@ body {
     justify-content: space-between;
     z-index: 2;
     background: #00000025;
+
+}
+
+.header .nav_bar .logo_box {
+    margin-left: -1.5rem;
+}
+
+.header .nav_bar .logo_box img {
+    width: 20%;
 }
 
 .header .nav_bar .nav_links {
@@ -159,10 +168,6 @@ body {
     transition: margin-left 2s ease-in-out;
 }
 
-.header .slider .slides input[type="radio"] {
-    display: none;
-}
-
 .header .slider .slides .slide {
     width: 100vw;
     transition: 2s;
@@ -191,77 +196,30 @@ body {
     to { opacity: 1; }
   }
 
-.manual_navigation {
-    position: absolute;
-    width: 100%;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-}
-
-.manual_navigation .manualbtn {
-    border: 2px solid var(--Bright-Yellow);
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.manual_navigation .manualbtn:not(:last-child) {
-    margin-right: 40px;
-}
-
-.manual_navigation .manualbtn:hover {
-    background: var(--Yellow);
-}
-
-#radio1:checked ~ .first {
-    margin-left: -100%;
-}
-
-#radio2:checked ~ .first {
-    margin-left: -200%;
-}
-
-#radio3:checked ~ .first {
-    margin-left: -300%;
-}
-
-#radio4:checked ~ .first {
-    margin-left: 0;
-}
-
-.auto_navigation {
+  .header .slider .arrow {
     position: absolute;
     display: flex;
-    width: 100%;
-    justify-content: center;
-    margin-top: 582px;
-}
-.auto_navigation div {
-    border: 2px solid var(--Bright-Yellow);
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
+    align-items: center;
+    z-index: 2;
+    justify-content: space-between;
+    top: 15rem;
+    left: 3rem;
+    width: 93%;
+  }
 
-.auto_navigation div:not(:last-child) {
-    margin-right: 40px;
-}
+  .header .slider .arrow .arrow-left,
+  .header .slider .arrow .arrow-right {
+    font-size: 3rem;
+    color: var(--White);
+  }
 
-#radio1:checked ~ .auto_navigation .auto_btn_1 {
-    background: var(--Yellow);
-}
-#radio2:checked ~ .auto_navigation .auto_btn_2 {
-    background: var(--Yellow);
-}
-#radio3:checked ~ .auto_navigation .auto_btn_3 {
-    background: var(--Yellow);
-}
-#radio4:checked ~ .auto_navigation .auto_btn_4 {
-    background: var(--Yellow);
-}
+  .header .slider .arrow .arrow-left:hover,
+  .header .slider .arrow .arrow-right:hover {
+   color: var(--Red);
+   transition: 3s;
+  }
+
+ 
 
 main .description {
     display: flex;
@@ -306,7 +264,7 @@ main .description button:hover {
     .header .nav_bar .hambuger_icon {
         display: flex;
         position: absolute;
-        right: 2rem;
+        right: 3rem;
 
     }
 
@@ -324,15 +282,17 @@ main .description button:hover {
         height: auto;
     }
 
-    .header .slider .slides .slide p {
-        font-size: 2rem;
-        transform: translateX(5%);
-        width: 80%;
+    .header .slider .arrow  {
+        display: none;
     }
 
-    .manual_navigation .manualbtn,
-    .auto_navigation div {
-        display: none;
+    .header .slider .slides .slide p {
+        font-size: 1.5rem;
+        transform: translateX(5%);
+        top: 9rem;
+        width: 80%;
+        font-weight: 500;
+        line-height: 1.2;
     }
 
     main .description h1 {
