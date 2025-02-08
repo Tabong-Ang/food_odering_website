@@ -219,13 +219,11 @@ body {
    transition: 3s;
   }
 
- 
-
 main .description {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4rem 0;
+    margin: 2rem 0;
     width: 100%;
     justify-content: center;
 }
@@ -238,6 +236,8 @@ main .description h1 {
 
 main .description p {
     color: var(--Dark-Gray);
+    width: 50%;
+    text-align: justify;
 }
 
 main .description button {
@@ -249,7 +249,37 @@ main .description button:hover {
     background: var(--Yellow);
     border: 1px solid var(--Red);
     transition: 3s;
-    
+}
+
+main .sample_meals {
+    display: flex;
+    gap: 2rem;
+    margin: 4rem 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+main .sample_meals .sample_1 {
+    width: 20vw;
+    height: 30vw;
+}
+
+main .sample_meals img {
+    width: 100%;
+    height: 80%;
+}
+
+main .sample_meals button {
+    display: block;
+    margin: auto;
+    border-radius: 0rem;
+    margin-top: 1rem;
+}
+
+main .sample_meals button:hover {
+    background: transparent;
+    color: var(--Bright-Yellow);
 }
 
 
@@ -298,5 +328,19 @@ main .description button:hover {
     main .description h1 {
         line-height: 1;
         font-size: 2rem;
+    }
+
+    main .description p {
+        width: 90%;
+        margin-top: 1rem;
+    }
+
+    main .sample_meals {
+        flex-direction: column;
+    }
+
+    main .sample_meals .sample_1 {
+        width: 90vw;
+        height: auto;
     }
 }
