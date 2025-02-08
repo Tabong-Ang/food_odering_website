@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sofadi+One&family=Space+Grotesk:wght@300..700&display=swap");
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+    --Pale-Violet: #d89eff;
+    --Moderate-Violet: #9241c8;
+    --Desaturated-Dark-Violet: #6e5d7e;
+    --Grayish-Blue: #c6cacd;
+    --Very-Dark-Desaturated-Violet: #3e2753;
+    --Dark-Grayish-Violet: #a39daa;
+    --Light-Magenta: #e942ff;
+    --Light-Violet: #8838ff;
+    --Light-Grayish-Violet: #f5f3f7;
+    --Very-Dark-Desaturated-Violet: #3e2753;
+    --Very-Light-Magenta: #e570ff;
+    --Yellow: yellow;
+  }
+
+html {
+    font-family: "Poppins", sans-serif, Arial, Helvetica;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header {
+    width: 100vw;
+    position: relative;
+}
+
+.header .nav_bar {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    padding: 2rem 3rem;
+    justify-content: space-between;
+    z-index: 2;
+    background: #00000025;
+}
+
+.header .nav_bar .nav_links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.header .nav_bar .hambuger_icon {
+    display: none;
+    transform: rotate(90deg);
+}
+
+.header .nav_bar .hambuger_icon p {
+    font-size: 2.5rem;
+    color: var(--Light-Grayish-Violet);
+}
+
+.header .nav_bar .nav_links a {
+    text-decoration: none; 
+    font-size: 1.2rem;
+    color: var(--Light-Grayish-Violet);
+    font-weight: 500;
+}
+
+.header .nav_bar .nav_links button {
+    padding: .5rem 1rem;
+    background-color: var(--Light-Violet);
+    color: var(--Light-Grayish-Violet);
+    border-radius: 1rem;
+    border: 1px solid var(--Light-Violet);
+    font-weight: 500;
+}
+
+.header .nav_bar .nav_links button:hover {
+    background-color: transparent;
+    transition: 3s;
+}
+
+.header .slider {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.header .slider .slides {
+    display: flex;
+    transition: margin-left 2s ease-in-out;
+}
+
+.header .slider .slides input[type="radio"] {
+    display: none;
+}
+
+.header .slider .slides .slide {
+    width: 100vw;
+    transition: 2s;
+    position: relative;
+}
+
+.header .slider .slides .slide img {
+    width: 100vw;
+    height: 615px;
+}
+
+.header .slider .slides .slide p {
+    position: absolute;
+    font-size: 3rem;
+    color: var(--Light-Grayish-Violet);
+    text-shadow: 2px 2px 5px var(--Very-Dark-Desaturated-Violet);
+    top: 7rem;
+    font-weight: 900;
+    width: 30rem;
+    transform: translateX(25%);
+    animation: fadeIn 5s linear forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+.manual_navigation {
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual_navigation .manualbtn {
+    border: 2px solid var(--Light-Violet);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual_navigation .manualbtn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual_navigation .manualbtn:hover {
+    background: var(--Light-Violet);
+}
+
+#radio1:checked ~ .first {
+    margin-left: -100%;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -200%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -300%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: 0;
+}
+
+.auto_navigation {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 582px;
+}
+.auto_navigation div {
+    border: 2px solid var(--Light-Violet);
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.auto_navigation div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .auto_navigation .auto_btn_1 {
+    background: var(--Light-Violet);
+}
+#radio2:checked ~ .auto_navigation .auto_btn_2 {
+    background: var(--Light-Violet);
+}
+#radio3:checked ~ .auto_navigation .auto_btn_3 {
+    background: var(--Light-Violet);
+}
+#radio4:checked ~ .auto_navigation .auto_btn_4 {
+    background: var(--Light-Violet);
+}
+
+
+@media (max-width: 48rem) {
+
+    .header .nav_bar {
+        background: transparent;
+        flex-direction: column;
+    }
+    .header .nav_bar .hambuger_icon {
+        display: flex;
+        position: absolute;
+        right: 2rem;
+
+    }
+
+    .header .nav_bar .nav_links {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        background: #000000b6;
+        border-radius: .8rem;
+        padding: 1rem 0;
+        margin-top: 1rem;
+    }
+
+    .header .slider .slides .slide img {
+        height: auto;
+    }
+
+    .header .slider .slides .slide p {
+        font-size: 2rem;
+        transform: translateX(5%);
+        width: 80%;
+    }
+
+    .manual_navigation .manualbtn,
+    .auto_navigation div {
+        display: none;
+    }
+}
