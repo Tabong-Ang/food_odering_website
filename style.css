@@ -81,18 +81,11 @@ h6 {
 }
 
 :root {
-    --Pale-Violet: #d89eff;
-    --Moderate-Violet: #9241c8;
-    --Desaturated-Dark-Violet: #6e5d7e;
-    --Grayish-Blue: #c6cacd;
-    --Very-Dark-Desaturated-Violet: #3e2753;
-    --Dark-Grayish-Violet: #a39daa;
-    --Light-Magenta: #e942ff;
-    --Light-Violet: #8838ff;
-    --Light-Grayish-Violet: #f5f3f7;
-    --Very-Dark-Desaturated-Violet: #3e2753;
-    --Very-Light-Magenta: #e570ff;
-    --Yellow: yellow;
+    --Red:#E63946;
+    --Yellow: #F4A261;
+    --White: #FFFFFF;
+    --Bright-Yellow: #FFC107;
+    --Dark-Gray: #333333;
   }
 
 html {
@@ -101,6 +94,7 @@ html {
 
 body {
     overflow-x: hidden;
+    background-color: lavender;
 }
 
 .header {
@@ -131,22 +125,22 @@ body {
 
 .header .nav_bar .hambuger_icon p {
     font-size: 2.5rem;
-    color: var(--Light-Grayish-Violet);
+    color: var(--White);
 }
 
 .header .nav_bar .nav_links a {
     text-decoration: none; 
     font-size: 1.2rem;
-    color: var(--Light-Grayish-Violet);
+    color: var(--White);
     font-weight: 500;
 }
 
-.header .nav_bar .nav_links button {
+ button {
     padding: .5rem 1rem;
-    background-color: var(--Light-Violet);
-    color: var(--Light-Grayish-Violet);
+    background: var(--Bright-Yellow);
+    color: var(--White);
     border-radius: 1rem;
-    border: 1px solid var(--Light-Violet);
+    border: 1px solid var(--Bright-Yellow);
     font-weight: 500;
 }
 
@@ -183,8 +177,8 @@ body {
 .header .slider .slides .slide p {
     position: absolute;
     font-size: 3rem;
-    color: var(--Light-Grayish-Violet);
-    text-shadow: 2px 2px 5px var(--Very-Dark-Desaturated-Violet);
+    color: var(--White);
+    text-shadow: 2px 2px 5px var(--Dark-Gray);
     top: 7rem;
     font-weight: 900;
     width: 30rem;
@@ -206,7 +200,7 @@ body {
 }
 
 .manual_navigation .manualbtn {
-    border: 2px solid var(--Light-Violet);
+    border: 2px solid var(--Bright-Yellow);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -218,7 +212,7 @@ body {
 }
 
 .manual_navigation .manualbtn:hover {
-    background: var(--Light-Violet);
+    background: var(--Yellow);
 }
 
 #radio1:checked ~ .first {
@@ -245,7 +239,7 @@ body {
     margin-top: 582px;
 }
 .auto_navigation div {
-    border: 2px solid var(--Light-Violet);
+    border: 2px solid var(--Bright-Yellow);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -257,23 +251,50 @@ body {
 }
 
 #radio1:checked ~ .auto_navigation .auto_btn_1 {
-    background: var(--Light-Violet);
+    background: var(--Yellow);
 }
 #radio2:checked ~ .auto_navigation .auto_btn_2 {
-    background: var(--Light-Violet);
+    background: var(--Yellow);
 }
 #radio3:checked ~ .auto_navigation .auto_btn_3 {
-    background: var(--Light-Violet);
+    background: var(--Yellow);
 }
 #radio4:checked ~ .auto_navigation .auto_btn_4 {
-    background: var(--Light-Violet);
+    background: var(--Yellow);
 }
 
 main .description {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 4rem 0;
+    width: 100%;
+    justify-content: center;
 }
+
+main .description h1 {
+    color: var(--Red);
+    font-size: 3rem;
+    text-align: center;
+}
+
+main .description p {
+    color: var(--Dark-Gray);
+}
+
+main .description button {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
+main .description button:hover {
+    background: var(--Yellow);
+    border: 1px solid var(--Red);
+    transition: 3s;
+    
+}
+
+
 
 
 @media (max-width: 48rem) {
@@ -312,5 +333,10 @@ main .description {
     .manual_navigation .manualbtn,
     .auto_navigation div {
         display: none;
+    }
+
+    main .description h1 {
+        line-height: 1;
+        font-size: 2rem;
     }
 }
