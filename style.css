@@ -269,6 +269,12 @@ body {
     background: var(--Light-Violet);
 }
 
+main .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 @media (max-width: 48rem) {
 
