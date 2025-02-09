@@ -314,6 +314,7 @@ main .book_a_table p {
 main .table_types {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 main .table_types img {
@@ -351,6 +352,7 @@ main .food_gallery p {
 main .food_gallery .food {
   display: flex;
   margin: 2rem;
+  align-items: center;
 }
 
 main .food_gallery .food img {
@@ -368,6 +370,55 @@ main .food_gallery button {
 main .food_gallery button:hover {
   background-color: transparent;
 }
+
+main .location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .location h4{
+    color: var(--White);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+main .location p {
+    font-size: 1.2rem;
+    color: var(--White);
+    width: 60%;
+    margin-bottom: 2rem;
+}
+
+main .location .pics_iframe_box {
+    display: flex;
+    justify-content: space-around;
+}
+
+main .location .pics_box {
+    width: 45%;
+}
+
+main .location .pics_box .side_pics img {
+    width: 50%;
+}
+main .location .pics_box .side_pics img:nth-child(2) {
+    margin-left: -.28rem;
+}
+
+main .location .pics_box .side_pics + img {
+    width: 100%;
+    height: 18.75rem;
+    margin-bottom: 2rem;
+    margin-top: -1rem;
+}
+
+main .location .pics_iframe_box iframe {
+    height: 32.5rem;
+    width: 45%;
+}
+
+
 
 @media (max-width: 48rem) {
   .header .nav_bar {
@@ -413,10 +464,13 @@ main .food_gallery button:hover {
   }
 
   main .description p,
-  main .book_a_table p {
+  main .book_a_table p,
+  main .food_gallery p,
+  main .location p {
     width: 90%;
     font-size: 1rem;
   }
+
   main .description button {
     width: 90%;
   }
@@ -430,13 +484,12 @@ main .food_gallery button:hover {
     height: auto;
   }
 
-  main .table_types img {
-    width: 100%;
-    height: auto;
-  }
-
-  main .food_gallery p {
+  main .table_types img,
+  main .food_gallery .food img,
+  main .location .pics_box .side_pics img,
+  main .location .pics_box .side_pics + img   {
     width: 90%;
+    height: auto;
   }
 
   main .food_gallery .food {
@@ -444,12 +497,29 @@ main .food_gallery button:hover {
     width: 100%;
   }
 
-  main .food_gallery .food img {
-    width: 100%;
-  }
-
   main .food_gallery button {
     width: 90%;
+  }
+
+  main .location .pics_iframe_box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main .location .pics_box {
+    width: 100%;
+}
+
+  main .location .pics_box,
+  main .location .pics_box .side_pics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main .location .pics_iframe_box iframe {
+    width: 90%;
+    height: 21rem;
   }
 
 }
