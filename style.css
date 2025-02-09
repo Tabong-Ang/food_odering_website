@@ -368,13 +368,16 @@ main .table_types img:hover {
     main .description h1 {
         line-height: 1;
         font-size: 2rem;
-        width: 90%;
+        width: 100%;
     }
 
     main .description p,
     main .book_a_table p  {
         width: 90%;
         font-size: 1rem;
+    }
+    main .description button {
+        width: 90%;
     }
 
     main .sample_meals {
@@ -383,6 +386,11 @@ main .table_types img:hover {
 
     main .sample_meals .sample_1 {
         width: 90vw;
+        height: auto;
+    }
+
+    main .table_types img {
+        width: 100%;
         height: auto;
     }
 
