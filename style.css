@@ -81,10 +81,10 @@ h6 {
 }
 
 :root {
-    --Red:#D32F2F;
-    --Yellow: #F4A261;
-    --White: #FFFFFF;
-    --Bright-Yellow: #FF6F00;
+    --Background-Warm-Brown: #8B4513;
+    --Red:#B22222;
+    --White: #F5F5F5;
+    --Bright-Yellow: #FF4500;
     --Dark-Gray: #333333;
   }
 
@@ -94,7 +94,7 @@ html {
 
 body {
     overflow-x: hidden;
-    background-color: lavender;
+    background-color: var(--Background-Warm-Brown);
 }
 
 .header {
@@ -176,15 +176,15 @@ body {
 
 .header .slider .slides .slide img {
     width: 100vw;
-    height: 615px;
+    height: auto;
 }
 
 .header .slider .slides .slide p {
     position: absolute;
     font-size: 3rem;
     color: var(--White);
-    text-shadow: 2px 2px 5px var(--Dark-Gray);
-    top: 7rem;
+    text-shadow: 4px 4px 10px var(--Dark-Gray);
+    top: 12rem;
     font-weight: 900;
     width: 30rem;
     transform: translateX(25%);
@@ -229,25 +229,29 @@ main .description {
 }
 
 main .description h1 {
-    color: var(--Red);
+    color: var(--White);
     font-size: 3rem;
     text-align: center;
 }
 
 main .description p {
-    color: var(--Dark-Gray);
+    color: var(--White);
     width: 50%;
     text-align: justify;
+    font-size: 1.2rem;
+    margin-top: 1rem;
 }
 
 main .description button {
     margin-top: 1.5rem;
     font-size: 1.5rem;
+    width: 50%;
+    border-radius: 0rem;
 }
 
 main .description button:hover {
     background: var(--Yellow);
-    border: 1px solid var(--Red);
+    border: 1px solid var(--Bright-Yellow);
     transition: 3s;
 }
 
@@ -292,7 +296,7 @@ main .book_a_table {
 }
 
 main .book_a_table h2 {
-    color: var(--Red);
+    color: var(--White);
     font-size: 2rem;
 }
 
@@ -300,6 +304,8 @@ main .book_a_table p {
     width: 60%;
     text-align: justify;
     margin-top: 1rem;
+    color: var(--White);
+    font-size: 1.2rem;
 }
 
 
@@ -309,8 +315,12 @@ main .table_types {
 }
 
 main .table_types img {
-    width: 50%;
+    width: 20%;
     height: auto;
+    transition: transform 5s ease-in-out
+}
+main .table_types img:hover {
+    transform: scale(1.05);
 }
 
 
@@ -336,7 +346,6 @@ main .table_types img {
         background: #000000b6;
         border-radius: .8rem;
         padding: 1rem 0;
-        margin-top: 1rem;
     }
 
     .header .slider .slides .slide img {
@@ -359,12 +368,13 @@ main .table_types img {
     main .description h1 {
         line-height: 1;
         font-size: 2rem;
+        width: 90%;
     }
 
     main .description p,
     main .book_a_table p  {
         width: 90%;
-        margin-top: 1rem;
+        font-size: 1rem;
     }
 
     main .sample_meals {
