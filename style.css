@@ -97,7 +97,6 @@ body {
   background-color: var(--Background-Warm-Brown);
 }
 
-
 .header {
   width: 100vw;
   position: relative;
@@ -373,50 +372,50 @@ main .food_gallery button:hover {
 }
 
 main .location {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-main .location h4{
-    color: var(--White);
-    font-size: 2rem;
-    margin-bottom: 1rem;
+main .location h4 {
+  color: var(--White);
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 main .location p {
-    font-size: 1.2rem;
-    color: var(--White);
-    width: 60%;
-    margin-bottom: 2rem;
+  font-size: 1.2rem;
+  color: var(--White);
+  width: 60%;
+  margin-bottom: 2rem;
 }
 
 main .location .pics_iframe_box {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 main .location .pics_box {
-    width: 45%;
+  width: 45%;
 }
 
 main .location .pics_box .side_pics img {
-    width: 50%;
+  width: 50%;
 }
 main .location .pics_box .side_pics img:nth-child(2) {
-    margin-left: -.28rem;
+  margin-left: -0.28rem;
 }
 
 main .location .pics_box .side_pics + img {
-    width: 100%;
-    height: 18.75rem;
-    margin-bottom: 2rem;
-    margin-top: -1rem;
+  width: 100%;
+  height: 18.75rem;
+  margin-bottom: 2rem;
+  margin-top: -1rem;
 }
 
 main .location .pics_iframe_box iframe {
-    height: 32.5rem;
-    width: 45%;
+  height: 32.5rem;
+  width: 45%;
 }
 
 main .contact_hours_of_operation {
@@ -432,7 +431,7 @@ main .contact_hours_of_operation .hours_of_operation {
 main .contact_hours_of_operation .hours_of_operation h5 {
   color: var(--White);
   font-size: 1.5rem;
-} 
+}
 
 main .contact_hours_of_operation .hours_of_operation p {
   color: var(--White);
@@ -468,7 +467,7 @@ input {
 input::placeholder,
 textarea::placeholder {
   color: var(--White);
-  opacity: .5;
+  opacity: 0.5;
 }
 
 textarea {
@@ -491,7 +490,42 @@ main .contact_hours_of_operation .contact_form button {
   border-radius: 0rem;
 }
 
+footer {
+  background-image: url(./images/footer.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 20rem;
+  padding: 2rem;
+  color: var(--White);
+}
 
+footer h6 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+footer p,
+address {
+  font-size: 1.2rem;
+}
+
+footer .social_links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+footer a {
+  color: var(--White);
+}
+
+footer label {
+  display: block;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
 
 @media (max-width: 48rem) {
   .header .nav_bar {
@@ -560,7 +594,7 @@ main .contact_hours_of_operation .contact_form button {
   main .table_types img,
   main .food_gallery .food img,
   main .location .pics_box .side_pics img,
-  main .location .pics_box .side_pics + img   {
+  main .location .pics_box .side_pics + img {
     width: 90%;
     height: auto;
   }
@@ -581,7 +615,7 @@ main .contact_hours_of_operation .contact_form button {
 
   main .location .pics_box {
     width: 100%;
-}
+  }
 
   main .location .pics_box,
   main .location .pics_box .side_pics {
@@ -603,16 +637,20 @@ main .contact_hours_of_operation .contact_form button {
 
   main .contact_hours_of_operation .hours_of_operation,
   main .contact_hours_of_operation .contact_form,
-  main .contact_hours_of_operation .contact_form button ,
+  main .contact_hours_of_operation .contact_form button,
   input,
   textarea {
     width: 100%;
   }
 
   main .contact_hours_of_operation .contact_form .name_tel,
-.email_subject {
-  flex-direction: column;
-  gap: 0;
-}
+  .email_subject {
+    flex-direction: column;
+    gap: 0;
+  }
 
+  footer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.664), rgba(0, 0, 0, 0.596)),
+    url(./images/footer.jpg);
+  }
 }
