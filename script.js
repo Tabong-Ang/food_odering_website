@@ -50,3 +50,35 @@ displayLinks.addEventListener("click", () => {
     navLinks.style.display = "none";
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const scrollRevealOption = {
+    distance: "50px",
+    origin: "bottom",
+    duration: 1000,
+  };
+
+  // Description section 
+  ScrollReveal().reveal(".description h1", {
+    ...scrollRevealOption,
+  });
+
+  ScrollReveal().reveal(".description p", {
+    ...scrollRevealOption,
+    delay: 500,
+  });
+
+  ScrollReveal().reveal(".description button", {
+    ...scrollRevealOption,
+    delay: 1000,
+  });
+
+  ScrollReveal().reveal(".sample_meals .sample_1", {
+    ...scrollRevealOption,
+    // delay: 1000,
+  });
+
+
+
+});
