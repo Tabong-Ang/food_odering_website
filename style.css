@@ -612,7 +612,8 @@ margin-bottom: 1rem;
   }
 
   main .sample_meals p,
-  main .menu_highlights p {
+  main .menu_highlights p,
+  main .contact_hours_of_operation .hours_of_operation p {
     width: 90%;
   }
 
@@ -661,7 +662,7 @@ margin-bottom: 1rem;
 
   main .location .pics_iframe_box .side_pics div,
   main .location .pics_iframe_box iframe {
-    width: 90%;
+    width: 100%;
   }
 
   main .location .pics_iframe_box iframe {
@@ -676,10 +677,14 @@ margin-bottom: 1rem;
   main .contact_hours_of_operation .contact_form .name_tel,
 .email_subject {
   flex-direction: column;
-  width: 90%;
+  gap: 0;
 }
 
 main .contact_hours_of_operation .contact_form {
   margin-right: 0;
+}
+
+main .contact_hours_of_operation .hours_of_operation h6 {
+  margin-top: 2rem;
 }
 }
