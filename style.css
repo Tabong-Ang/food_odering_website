@@ -541,7 +541,10 @@ margin-bottom: 1rem;
 .social_links .bx{
   color: var(--White);
   font-size: 1.5rem;
-  margin-left: .5rem;
+}
+
+footer .bg-colo  a {
+  color: var(--White);
 }
 
 
@@ -558,13 +561,16 @@ margin-bottom: 1rem;
     top: 4rem;
     right: 0;
     width: 100vw;
-    background: var(--bg-color);
+    background: rgba(0, 0, 0, 0.534);
+    justify-content: center;
+    align-items: center;
+    gap: 0;
   }
 
   .header .nav_bar .logo_box + .nav_links {
     position: absolute;
-    top: 2rem;
     right: 0;
+    top: 8.5rem;
   }
 
   .header .nav_bar .hambuger_icon {
@@ -663,10 +669,6 @@ margin-bottom: 1rem;
   main .location .pics_iframe_box .side_pics div,
   main .location .pics_iframe_box iframe {
     width: 100%;
-  }
-
-  main .location .pics_iframe_box iframe {
-    margin-right: 2rem;
   }
 
   main .contact_hours_of_operation {
